@@ -1,45 +1,18 @@
-%-------------------------------------------------------------------------%
-%  Binary Atom Search Optimization (BASO) source codes demo version       %
-%                                                                         %
-%  Programmer: Jingwei Too                                                %
-%                                                                         %
-%  E-Mail: jamesjames868@gmail.com                                        %
-%-------------------------------------------------------------------------%
-
-function [sFeat,Sf,Nf,curve]=jBASO(feat,label,N,T,alpha,beta,Vmax)
-%---Inputs-----------------------------------------------------------------
-% feat:   features
-% label:  labelling
-% N:      Number of particles
-% T:      Maximum number of iterations
-% alpha:  Depth weight
-% beta:   Multiplier weight
-% Vmax:   Maximum velocity
-%---Outputs----------------------------------------------------------------
-% sFeat:  Selected features
-% Sf:     Selected feature index
-% Nf:     Number of selected features
-% curve:  Convergence curve
-%--------------------------------------------------------------------------
-
+function [sFeat,Sf,Nf,curve]=jBASO(feat,label,N,T,alpha,beta,HO)
 
 fun=@jFitnessFunction; 
-D=size(feat,2); X=zeros(N,D); V=zeros(N,D);
+D=size(feat,2); 
+X=jInitialPopulation(N,D); V=zeros(N,D); Vmax=6;
 for i=1:N
   for d=1:D
-    if rand() > 0.5
-      X(i,d)=1;
-    end
     V(i,d)=-Vmax+(Vmax-(-Vmax))*rand();
   end
 end
 A=zeros(N,D); curve=inf; t=1; fit=zeros(1,N); fitG=inf; 
-figure(1); clf; axis([1 100 0 0.2]); xlabel('Number of iterations');
-ylabel('Fitness Value'); title('Convergence Curve'); grid on;
 %---Iteration start-------------------------------------------------------
 while t <= T
   for i=1:N
-    fit(i)=fun(feat,label,X(i,:));
+    fit(i)=fun(feat,label,X(i,:),HO);
     if fit(i) < fitG
       fitG=fit(i); Xgb=X(i,:);
     end
@@ -83,8 +56,7 @@ while t <= T
     end
   end
   curve(t)=fitG; 
-  pause(1e-20); hold on;
-  CG=plot(t,fitG,'Color','r','Marker','.'); set(CG,'MarkerSize',5);
+  fprintf('\nIteration %d Best (BASO)= %f',t,curve(t)) 
   t=t+1;
 end
 Pos=1:D; Sf=Pos(Xgb==1); Nf=length(Sf); sFeat=feat(:,Sf); 
@@ -106,5 +78,3 @@ else
 end           
 Potential=n*(12*(-H)^(-13)-6*(-H)^(-7)); 
 end
-
-

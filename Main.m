@@ -1,5 +1,5 @@
 %-------------------------------------------------------------------%
-%  Binary Atom Search Optimization (BASO) demo version              %                                     %
+%  Binary Atom Search Optimization (BASO) demo version              % 
 %-------------------------------------------------------------------%
 
 

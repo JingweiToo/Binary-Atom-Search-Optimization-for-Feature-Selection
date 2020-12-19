@@ -9,8 +9,8 @@
 
 
 ## Input
-* *feat*     : feature vector ( instances *x* features )
-* *label*    : label vector ( instances *x* 1 )
+* *feat*     : feature vector ( Instances *x* Features )
+* *label*    : label vector ( Instances *x* 1 )
 * *N*        : number of atoms
 * *max_Iter* : maximum number of iterations
 * *alpha*    : depth weight

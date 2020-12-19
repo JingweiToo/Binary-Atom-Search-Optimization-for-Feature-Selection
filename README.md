@@ -9,19 +9,19 @@
 
 
 ## Input
-* feat     : feature vector ( instances *x* features )
-* label    : label vector ( instances *x* 1 )
-* N        : number of atoms
-* max_Iter : maximum number of iterations
-* alpha    : depth weight
-* beta     : multiplier weight
+* *feat*     : feature vector ( instances *x* features )
+* *label*    : label vector ( instances *x* 1 )
+* *N*        : number of atoms
+* *max_Iter* : maximum number of iterations
+* *alpha*    : depth weight
+* *beta*     : multiplier weight
 
 
 ## Output
-* sFeat    : selected features
-* Sf       : selected feature index
-* Nf       : number of selected features
-* curve    : convergence curve
+* *sFeat*    : selected features
+* *Sf*       : selected feature index
+* *Nf*       : number of selected features
+* *curve*    : convergence curve
 
 
 ### Example

@@ -4,8 +4,24 @@
 
 
 ## Introduction
-* This toolbox offers a Binary Atom Search Optimization (BASO)  
+* This toolbox offers a Binary Atom Search Optimization ( BASO )  
 * The < Main.m file > illustrates the example of how BASO can solve the feature selection problem using benchmark data-set. 
+
+
+## Input
+* feat     : feature vector ( instances *x* features )
+* label    : label vector ( instances *x* 1 )
+* N        : number of atoms
+* max_Iter : maximum number of iterations
+* alpha    : depth weight
+* beta     : multiplier weight
+
+
+## Output
+* sFeat    : selected features
+* Sf       : selected feature index
+* Nf       : number of selected features
+* curve    : convergence curve
 
 
 ### Example
@@ -33,6 +49,11 @@ ylabel('Fitness Value');
 title('BASO'); grid on;
 
 ```
+
+
+## Requirement
+* MATLAB 2014 or above
+* Statistics and Machine Learning Toolbox
 
 
 ## Cite As

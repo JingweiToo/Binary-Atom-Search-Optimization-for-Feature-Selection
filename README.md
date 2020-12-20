@@ -47,7 +47,6 @@ plot(1:max_Iter,curve);
 xlabel('Number of iterations');
 ylabel('Fitness Value'); 
 title('BASO'); grid on;
-
 ```
 
 
@@ -66,6 +65,5 @@ title('BASO'); grid on;
   year={2020},
   publisher={Taylor \& Francis}
 }
-
 ```
 

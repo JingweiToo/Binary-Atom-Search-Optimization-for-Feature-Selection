@@ -1,8 +1,8 @@
 # Binary Atom Search Optimization for Feature Selection
 
 [![View Binary Atom Search Optimization for Feature Selection on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/78531-binary-atom-search-optimization-for-feature-selection)
-[![License](https://img.shields.io/badge/license-BSD_3-yellow.svg)](https://github.com/JingweiToo/Machine-Learning-Toolbox/blob/master/LICENSE)
-[![GitHub release](https://img.shields.io/badge/release-1.3-green.svg)](https://github.com/JingweiToo/Machine-Learning-Toolbox)
+[![License](https://img.shields.io/badge/license-BSD_3-blue.svg)](https://github.com/JingweiToo/Machine-Learning-Toolbox/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/badge/release-1.3-blue.svg)](https://github.com/JingweiToo/Machine-Learning-Toolbox)
 
 ![Wheel](https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/797de05c-9609-4d7a-9746-a459cbcd44aa/58c7f789-a9d7-458b-9ee0-e62af4c9ed18/images/1595483603.JPG)
 
